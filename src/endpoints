@@ -1,0 +1,50 @@
+
+-------- ADMIN ENDPOINTS -------
+
+#GET ITEM LIST
+method   :  GET
+endpoint : http://localhost:3000/admin
+
+
+#ADD ITEM
+method   : POST 
+endpoint : http://localhost:3000/admin
+body  :   {
+            "name": "sugar",
+            "price": 18,
+            "quantity": 2
+          }
+
+#DELETE ITEM
+method   : DELETE 
+endpoint : http://localhost:3000/admin/5
+
+#UPDATE ITEM
+method   : PATCH
+endpoint :  http://localhost:3000/admin/6
+body  :   {
+            "name": "sugar",
+            "price": 18,
+            "quantity": 2
+          }
+
+
+----- USER ENDPOINTS -------------------
+
+
+#GET AVAILABLE ITEMS
+method : GET
+endpoint : http://localhost:3000/user
+
+
+#BOOK GROCERY ITEMS
+method : POST
+endpoint : http://localhost:3000/user?userName=rahul123
+body :  [
+            {
+            "itemName" : "sugar"
+            },
+            {
+                "itemName" : "shampoo"
+            }
+        ]
